@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Whatchya Want</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background: #f5f5f5;
@@ -17,6 +19,8 @@
       position: relative;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 100%;
+      box-sizing: border-box;
     }
     header h1 {
       margin: 0;
@@ -37,6 +41,8 @@
       padding: 15px 0;
       display: flex;
       justify-content: center;
+      width: 100%;
+      box-sizing: border-box;
     }
     #search {
       width: 80%;
@@ -57,6 +63,8 @@
       background: white;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
       border-top: none;
+      width: 100%;
+      box-sizing: border-box;
     }
     .filter-btn {
       padding: 6px 12px;
@@ -76,15 +84,16 @@
     }
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 15px;
       padding: 15px;
-      max-width: calc((250px + 15px) * 5); /* limit to 5 cards per row */
-      margin: 0 auto;
+      justify-items: start;
+      width: 100%;
+      box-sizing: border-box;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
       .products {
-        grid-template-columns: repeat(2, 1fr); /* min 2 per row */
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     .card {
@@ -94,10 +103,9 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
-      height: 320px; /* fixed card height */
-      width: 250px; /* fixed card width */
-      margin: auto;
       transition: transform 0.15s;
+      width: 100%;
+      max-width: 300px;
     }
     .card:hover {
       transform: translateY(-3px);
@@ -105,7 +113,7 @@
     }
     .card img {
       width: 100%;
-      height: 280px;
+      height: 200px;
       object-fit: cover;
     }
     .card a {
@@ -113,9 +121,6 @@
       text-decoration: none;
       color: black;
       font-weight: bold;
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
     }
   </style>
 </head>
