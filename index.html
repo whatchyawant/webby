@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whatchya want?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2rem;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    }
+
+    .search-container input {
+      width: 90%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 15px;
+    }
+
+    .filter-chip {
+      padding: 6px 14px;
+      border-radius: 16px;
+      background: #e3f2fd; /* Pastel light blue */
+      cursor: pointer;
+      font-size: 0.9rem;
+      border: 1px solid #bbdefb;
+      transition: all 0.2s ease;
+    }
+
+    .filter-chip.selected {
+      background: #bbdefb;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      border-color: #90caf9;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-name {
+      padding: 10px;
+      font-size: 1rem;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>What do you need?</h1>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search products...">
+  </div>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="products" id="productList"></div>
+
+  <script src="products.js"></script>
+  <script>
+    const filterMappings = {
+      "Tiktok": ["tiktok"],
+      "Cool": ["cool"],
+      "Girls": ["girls", "girl"],
+      "Boys": ["boys", "boy"],
+      "Women": ["women", "woman"],
+      "Men": ["men", "man"],
+      "Makeup": ["makeup"],
+      "Skincare": ["skincare", "skin care"],
+      "Aritzia Dupes": ["aritzia dupe"],
+      "Lulu Dupes": ["lululemon dupe"],
+      "TankAir Dupe": ["tank air dupe"],
+      "Skims Dupes": ["skims dupe"]
+    };
+
+    const filterTags = Object.keys(filterMappings);
+
+    const filtersContainer = document.getElementById('filters');
+    const productList = document.getElementById('productList');
+    const searchInput = document.getElementById('searchInput');
+
+    let selectedTag = null;
+
+    function createFilters() {
+      filtersContainer.innerHTML = '';
+      filterTags.forEach(tag => {
+        const chip = document.createElement('div');
+        chip.className = 'filter-chip';
+        chip.textContent = tag;
+        chip.addEventListener('click', () => {
+          if (selectedTag === tag) {
+            selectedTag = null;
+            chip.classList.remove('selected');
+          } else {
+            selectedTag = tag;
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('selected'));
+            chip.classList.add('selected');
+          }
+          renderProducts();
+          updateURLTag();
+        });
+        filtersContainer.appendChild(chip);
+      });
+    }
+
+    function updateURLTag() {
+      const url = new URL(window.location);
+      if (selectedTag) {
+        url.searchParams.set('tag', selectedTag);
+      } else {
+        url.searchParams.delete('tag');
+      }
+      window.history.replaceState({}, '', url);
+    }
+
+    function loadTagFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const tagFromURL = params.get('tag');
+      if (tagFromURL && filterTags.includes(tagFromURL)) {
+        selectedTag = tagFromURL;
+        document.querySelectorAll('.filter-chip').forEach(c => {
+          if (c.textContent === tagFromURL) {
+            c.classList.add('selected');
+          }
+        });
+      }
+    }
+
+    function renderProducts() {
+      const searchTerm = searchInput.value.toLowerCase();
+      productList.innerHTML = '';
+
+      products
+        .filter(p => {
+          const matchesSearch = 
+            p.name.toLowerCase().includes(searchTerm) ||
+            p.tags.some(t => t.toLowerCase().includes(searchTerm));
+          
+          const matchesTag = selectedTag
+            ? p.tags.some(t => filterMappings[selectedTag].includes(t.toLowerCase()))
+            : true;
+
+          return matchesSearch && matchesTag;
+        })
+        .forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'product-card';
+          card.innerHTML = `
+            <a href="${p.link}" target="_blank">
+              <img src="${p.img}" alt="${p.name}">
+              <div class="product-name">${p.name}</div>
+            </a>
+          `;
+          productList.appendChild(card);
+        });
+    }
+
+    searchInput.addEventListener('input', renderProducts);
+
+    createFilters();
+    loadTagFromURL();
+    renderProducts();
+  </script>
+</body>
+</html>
