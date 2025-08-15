@@ -1,7 +1,7 @@
 const products = [
-  { "name": "Face Mask", "img": "images/jart.jpg", "link": "https://amzn.to/4lpEyRF", "tags": ["skin care","women","girls","makeup","skincare","korean"] },
-  { "name": "Collagen Mask", "img": "images/mask.jpg", "link": "https://amzn.to/4fDm3b3", "tags": ["skin care","women","makeup","skincare","korean"] },
-  { "name": "Volufiline", "img": "images/volu.jpg", "link": "https://amzn.to/45yAGrz", "tags": ["skin care","women","makeup","skincare","korean"] },
+  { "name": "Face Mask", "img": "images/jart.jpg", "link": "https://amzn.to/4lpEyRF", "tags": ["skin care","women","girls","skincare","korean"] },
+  { "name": "Collagen Mask", "img": "images/mask.jpg", "link": "https://amzn.to/4fDm3b3", "tags": ["skin care","women","skincare","korean"] },
+  { "name": "Volufiline", "img": "images/volu.jpg", "link": "https://amzn.to/45yAGrz", "tags": ["skin care","women","skincare","korean"] },
   { "name": "Lip Stain", "img": "images/lipptik.jpg", "link": "https://amzn.to/3V1N5PX", "tags": ["women","makeup","lip","bridesmaid","bridesmaids","tiktok"] },
   { "name": "Dior Lip Oil Dupe", "img": "images/elf.jpg", "link": "https://amzn.to/4mkFxnF", "tags": ["women","makeup","lip","bridesmaid","bridesmaids","tiktok"] },
   { "name": "Selfie Light", "img": "images/light.jpg", "link": "https://amzn.to/4loRmYx", "tags": ["women","girls","makeup","tiktok","cool"] },
