@@ -389,5 +389,19 @@ const products = [
   "link_ca": "https://amzn.to/45lpjoj",
   "img": "images/pourover.jpg",
   "tags": ["bifl", "women", "men", "cool"]
+},
+{
+  "name": "[BIFL] Pan",
+  "link": "https://amzn.to/4mOj02h",
+  "link_ca": "https://amzn.to/41vv1BJ",
+  "img": "images/pan.jpg",
+  "tags": ["bifl", "women",]
+},
+{
+  "name": "[BIFL] Cutting board",
+  "link": "https://amzn.to/3JiKE9h",
+  "link_ca": "https://amzn.to/4fD5ts9",
+  "img": "images/cut.jpg",
+  "tags": ["bifl", "women",]
 }
   ];
