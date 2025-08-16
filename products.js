@@ -201,4 +201,63 @@ const products = [
     "link": "https://amzn.to/3IYV1Pg",
     "link_ca": "https://amzn.to/4moSDji",
     "tags": ["woman", "girl", "dupe", "fashion", "clothes", "tankair", "tank air", "tankair dupe", "tank air dupe"]
-  },];
+  },
+
+{
+    "name": "[Nina Pool] Tatcha Water Cream Dupe",
+    "link": "https://amzn.to/4fANQcg",
+    "img": "images/tatcha.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] Frownies Dupe (semi botox results)",
+    "link": "https://amzn.to/45wiHCg",
+    "link_ca": "https://amzn.to/41GlwPX",
+    "img": "images/kt.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] Remove Sebatious Filaments On Nose",
+    "link": "https://amzn.to/45lgAm3",
+    "link_ca": "https://amzn.to/4mEjAQ4",
+    "img": "images/palmer.jpg",
+    "tags": ["skincare", "women", "nina", "ninapool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] Rhode Glazing Milk Dupe",
+    "link": "https://amzn.to/47xDnMJ",
+    "img": "images/byoma.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] Undereye Cream",
+    "link": "https://amzn.to/4fKlfS8",
+    "link_ca": "https://amzn.to/3JgtARf",
+    "img": "images/tucks.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] SOL DE JANEIRO Brazilian Bum Bum Cream Dupe",
+    "link": "https://amzn.to/3UxarwS",
+    "img": "images/firm.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] Redken Hair Oil Dupe",
+    "link": "https://amzn.to/45Dtr1M",
+    "img": "images/dove.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] Baccarat Rouge 540 Dupe",
+    "link": "https://amzn.to/4mJ2aSl",
+    "img": "images/bac.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  },
+  {
+    "name": "[Nina Pool] YSL Black Opium Dupe",
+    "link": "https://amzn.to/4oCA3Gf",
+    "img": "images/midnight.jpg",
+    "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
+  }
+  ];

@@ -4,22 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Whatchya Want</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
+      overflow-x: hidden; /* stop horizontal scroll */
+      font-family: 'Roboto', Arial, sans-serif;
       background: #f5f5f5;
     }
+
     header {
       background: white;
       text-align: center;
       position: relative;
       padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       width: 100%;
-      box-sizing: border-box;
     }
     header h1 {
       margin: 0;
@@ -35,13 +39,13 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
     .search-container {
       background: white;
       padding: 15px 0;
       display: flex;
       justify-content: center;
       width: 100%;
-      box-sizing: border-box;
     }
     #search {
       width: 80%;
@@ -53,6 +57,7 @@
       outline: none;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
     }
+
     .filters {
       display: flex;
       flex-wrap: wrap;
@@ -63,7 +68,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
       border-top: none;
       width: 100%;
-      box-sizing: border-box;
     }
     .filter-btn {
       padding: 6px 12px;
@@ -78,23 +82,40 @@
       background-color: #c1e0ff;
     }
     .filter-btn.active {
-      background-color: #a8d4ff;
+      background-color: pink;
       box-shadow: 0 3px 6px rgba(0,0,0,0.15);
     }
+    .filter-description {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #444;
+      display: none;
+      background: white;
+      width: 100%;
+    }
+
+    /* Products grid always full width */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 15px;
       padding: 15px;
-      justify-items: start;
       width: 100%;
-      box-sizing: border-box;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-    @media (max-width: 600px) {
+    /* Guarantee at least 2 columns */
+    @media (max-width: 520px) {
       .products {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
+    /* Cap at 5 columns */
+    @media (min-width: 1400px) {
+      .products {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
     .card {
       background: white;
       border-radius: 10px;
@@ -102,9 +123,9 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
+      width: 100%; /* fill track */
       transition: transform 0.15s;
-      width: 100%;
-      max-width: 300px;
+      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-3px);
@@ -114,19 +135,22 @@
       width: 100%;
       height: 200px;
       object-fit: cover;
+      display: block;
     }
     .card a {
       padding: 10px;
       text-decoration: none;
       color: black;
       font-weight: bold;
+      flex-grow: 1;
+      display: block;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Whatchya Want</h1>
-    <select id="countrySelect" class="flag-selector">
+    <select id="countrySelect" class="flag-selector" aria-label="Select country">
       <option value="us">🇺🇸</option>
       <option value="ca">🇨🇦</option>
     </select>
@@ -137,6 +161,7 @@
   </div>
 
   <div class="filters" id="filterBar"></div>
+  <div class="filter-description" id="filterDescription"></div>
 
   <div class="products" id="productsContainer"></div>
 
@@ -144,14 +169,19 @@
   <script>
     const filterTags = [
       "tiktok", "cool", "girls", "boys", "women", "men", "makeup", "skincare",
-      "aritzia dupe", "lululemon dupe", "tank air dupe", "skims dupe"
+      "aritzia dupe", "lululemon dupe", "tank air dupe", "skims dupe", "nina pool"
     ];
 
     const tagSynonyms = {
       "aritzia dupes": "aritzia dupe",
       "lululemon dupes": "lululemon dupe",
       "tank air dupes": "tank air dupe",
-      "skims dupes": "skims dupe"
+      "skims dupes": "skims dupe",
+      "nina pool duperoonie": "nina pool"
+    };
+
+    const filterDescriptions = {
+      "nina pool": "The Nina Pool collection highlights her favorite tested dupes."
     };
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -160,7 +190,7 @@
     let country = "us";
 
     function normalizeTag(tag) {
-      tag = tag.toLowerCase();
+      tag = (tag || "").toLowerCase();
       return tagSynonyms[tag] || tag;
     }
 
@@ -175,6 +205,7 @@
           activeTag = (activeTag === tag) ? "" : tag;
           renderFilters();
           renderProducts();
+          renderDescription();
           const params = new URLSearchParams(window.location.search);
           if (activeTag) {
             params.set("tag", tag);
@@ -185,6 +216,16 @@
         };
         bar.appendChild(btn);
       });
+    }
+
+    function renderDescription() {
+      const desc = document.getElementById("filterDescription");
+      if (activeTag && filterDescriptions[activeTag]) {
+        desc.textContent = filterDescriptions[activeTag];
+        desc.style.display = "block";
+      } else {
+        desc.style.display = "none";
+      }
     }
 
     function renderProducts() {
@@ -201,14 +242,17 @@
         .forEach(p => {
           const card = document.createElement("div");
           card.className = "card";
+          card.onclick = () => {
+            let url = p.link;
+            if (country === "ca" && p.link_ca) url = p.link_ca;
+            window.open(url, "_blank");
+          };
           const img = document.createElement("img");
           img.src = p.img;
           img.alt = p.name;
           const link = document.createElement("a");
           let url = p.link;
-          if (country === "ca" && p.link_ca) {
-            url = p.link_ca;
-          }
+          if (country === "ca" && p.link_ca) url = p.link_ca;
           link.href = url;
           link.target = "_blank";
           link.textContent = p.name;
@@ -225,6 +269,7 @@
     });
 
     renderFilters();
+    renderDescription();
     renderProducts();
   </script>
 </body>
