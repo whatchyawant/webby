@@ -259,5 +259,18 @@ const products = [
     "link": "https://amzn.to/4oCA3Gf",
     "img": "images/midnight.jpg",
     "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
-  }
+  },
+  {
+  "name": "[Nina Pool] Este Lauder Advanced Night Repair Dupe",
+  "link": "https://amzn.to/45Br8fI",
+  "img": "images/ester.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[Nina Pool] Facial Cleanser Dupe",
+  "link": "https://amzn.to/3UvV4EN",
+  "link_ca": "https://amzn.to/4fBIKMR",
+  "img": "images/thayers.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+}
   ];
