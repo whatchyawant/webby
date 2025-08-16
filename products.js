@@ -15,31 +15,190 @@ const products = [
   { "name": "Cloud Slippers", "img": "images/cloud.jpg", "link": "https://amzn.to/45RW7W0", "tags": ["girls","women","tiktok","fashion"] },
   { "name": "Speakers", "img": "images/speakers.jpg", "link": "https://amzn.to/46RBWsi", "tags": ["boys","men","tiktok","cool"] },
 
-  { "name": "Tna Socks Dupe", "img": "images/dupe1.jpg", "link": "https://amzn.to/3UadoDe", "link_ca": "https://amzn.to/45hQJdc", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Contour Esteem Bodysuit Dupe", "img": "images/dupe2.jpg", "link": "https://amzn.to/3JewWnC", "link_ca": "https://amzn.to/3IRaEZd", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Squareneck Longsleeve Contour Bodysuit Dupe", "img": "images/dupe3.jpg", "link": "https://amzn.to/41gFGjm", "link_ca": "https://amzn.to/450tzJJ", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Contour Tshirt Crew Dupe", "img": "images/dupe4.jpg", "link": "https://amzn.to/45wKd3D", "link_ca": "https://amzn.to/3OQvxEy", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Contour Boatneck Top Dupe", "img": "images/dupe5.jpg", "link": "https://amzn.to/45wKd3D", "link_ca": "https://amzn.to/3OQvxEy", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Superpuff Vest Shorty Dupe", "img": "images/dupe6.jpg", "link": "https://amzn.to/46Giz5u", "link_ca": "https://amzn.to/45iuwdf", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Superpuff Long Dupe", "img": "images/dupe7.jpg", "link": "https://amzn.to/4fgcPRU", "link_ca": "https://amzn.to/45djX8c", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Tna Golden Butter Zip Up Dupe", "img": "images/dupe8.jpg", "link": "https://amzn.to/4miaF6O", "link_ca": "https://amzn.to/3QHjV3A", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Tna Golden Butter Cheeky Hi Rise Leggings Dupe", "img": "images/dupe9.jpg", "link": "https://amzn.to/3IZvvJK", "link_ca": "https://amzn.to/45czrQu", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Tna Golden Butter Cheeky Flare Dupe", "img": "images/dupe10.jpg", "link": "https://amzn.to/45dbQxm", "link_ca": "https://amzn.to/4m8L3u7", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Tna Golden Butter Essential Skort Dupe", "img": "images/dupe11.jpg", "link": "https://amzn.to/4m8z5zV", "link_ca": "https://amzn.to/4m8wCuL", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Tna Golden Butter Romper Dupe", "img": "images/dupe12.jpg", "link": "https://amzn.to/45dbTcw", "link_ca": "https://amzn.to/3UTMnCr", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Tna Golden Butter Biker Shorts Dupe", "img": "images/dupe13.jpg", "link": "https://amzn.to/40NZfPW", "link_ca": "https://amzn.to/3UQ1g3T", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Sweatfleece Hoodie Dupe", "img": "images/dupe14.jpg", "link": "https://amzn.to/3U6vV3o", "link_ca": "https://amzn.to/3INkCkU", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Sweatfleece Cinched Sweatpant Dupe", "img": "images/dupe15.jpg", "link": "https://amzn.to/3UJuYOC", "link_ca": "https://amzn.to/45cOjLg", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Sweatfleece Cargo Sweatpant Dupe", "img": "images/dupe16.jpg", "link": "https://amzn.to/4moE8vI", "link_ca": "https://amzn.to/3ILngOw", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Sweatfleece Straight Sweatpant Dupe", "img": "images/dupe17.jpg", "link": "https://amzn.to/45wyT7A", "link_ca": "https://amzn.to/3OQhCMu", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Align Leggings Dupe", "img": "images/dupe18.jpg", "link": "https://amzn.to/45bGcjS", "link_ca": "https://amzn.to/4fA3aCN", "tags": ["women","girls","dupe","fashion","aritzia dupe"] },
-  { "name": "Nulu Flare Dupe", "img": "images/dupe19.jpg", "link": "https://amzn.to/4lWG5j8", "link_ca": "https://amzn.to/45eonlJ", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Track Highrise Shorts Dupe", "img": "images/dupe20.jpg", "link": "https://amzn.to/41pMew1", "link_ca": "https://amzn.to/45etHRh", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Biker Shorts Dupe", "img": "images/dupe21.jpg", "link": "https://amzn.to/3IZL5F8", "link_ca": "https://amzn.to/4mnUMYV", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Zip With Hood Dupe", "img": "images/dupe22.jpg", "link": "https://amzn.to/40PJLee", "link_ca": "https://amzn.to/4mnWrkU", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Halfzip Dupe", "img": "images/dupe23.jpg", "link": "https://amzn.to/452sEs4", "link_ca": "https://amzn.to/4fAfLYr", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Joggers Dupe", "img": "images/dupe24.jpg", "link": "https://amzn.to/4oql9TB", "link_ca": "https://amzn.to/4oql29t", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Scooba Halfzip Dupe", "img": "images/dupe25.jpg", "link": "https://amzn.to/4fnT6jt", "link_ca": "https://amzn.to/4oAEv2o", "tags": ["women","girls","dupe","fashion","lululemon dupe"] },
-  { "name": "Bodysuit Dupe", "img": "images/dupe26.jpg", "link": "https://amzn.to/4l62zNt", "link_ca": "https://amzn.to/4fABx7t", "tags": ["women","girls","dupe","fashion","skims dupe"] },
-  { "name": "Tank Top Dupe", "img": "images/dupe27.jpg", "link": "https://amzn.to/3IYV1Pg", "link_ca": "https://amzn.to/4fAiyoo", "tags": ["women","girls","dupe","fashion","tank air dupe"] }
-];
+ {
+    "name": "[Aritzia Dupe] Tna Socks Dupe",
+    "img": "images/dupe1.jpg",
+    "link": "https://amzn.to/3UadoDe",
+    "link_ca": "https://amzn.to/45hQJdc",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Contour Esteem Bodysuit Dupe",
+    "img": "images/dupe2.jpg",
+    "link": "https://amzn.to/3JewWnC",
+    "link_ca": "https://amzn.to/3IRaEZd",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Squareneck Longsleeve Contour Bodysuit Dupe",
+    "img": "images/dupe3.jpg",
+    "link": "https://amzn.to/41gFGjm",
+    "link_ca": "https://amzn.to/450tzJJ",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Contour Tshirt Crew Dupe",
+    "img": "images/dupe4.jpg",
+    "link": "https://amzn.to/45wKd3D",
+    "link_ca": "https://amzn.to/46Fv6Gi",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Contour Boatneck Top Dupe",
+    "img": "images/dupe5.jpg",
+    "link": "https://amzn.to/45wKd3D",
+    "link_ca": "https://amzn.to/4oirwZ1",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Superpuff Vest Shorty Dupe",
+    "img": "images/dupe6.jpg",
+    "link": "https://amzn.to/46Giz5u",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Superpuff Long Dupe",
+    "img": "images/dupe7.jpg",
+    "link": "https://amzn.to/4fgcPRU",
+    "link_ca": "https://amzn.to/4l9iEls",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Tna Golden Butter Zip Up Dupe",
+    "img": "images/dupe8.jpg",
+    "link": "https://amzn.to/4miaF6O",
+    "link_ca": "https://amzn.to/4oh6GJq",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Tna Golden Butter Cheeky Hi Rise Leggings Dupe",
+    "img": "images/dupe9.jpg",
+    "link": "https://amzn.to/3IZvvJK",
+    "link_ca": "https://amzn.to/4okdPbX",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Tna Golden Butter Cheeky Flare Dupe",
+    "img": "images/dupe10.jpg",
+    "link": "https://amzn.to/45dbQxm",
+    "link_ca": "https://amzn.to/4oh6zO0",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Tna Golden Butter Essential Skort Dupe",
+    "img": "images/dupe11.jpg",
+    "link": "https://amzn.to/4m8z5zV",
+    "link_ca": "https://amzn.to/44ZfNqB",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Tna Golden Butter Romper Dupe",
+    "img": "images/dupe12.jpg",
+    "link": "https://amzn.to/45dbTcw",
+    "link_ca": "https://amzn.to/457KlFi",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Tna Golden Butter Biker Shorts Dupe",
+    "img": "images/dupe13.jpg",
+    "link": "https://amzn.to/40NZfPW",
+    "link_ca": "https://amzn.to/47aHU7A",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Sweatfleece Hoodie Dupe",
+    "img": "images/dupe14.jpg",
+    "link": "https://amzn.to/3U6vV3o",
+    "link_ca": "https://amzn.to/41p9r1k",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Sweatfleece Cinched Sweatpant Dupe",
+    "img": "images/dupe15.jpg",
+    "link": "https://amzn.to/3UJuYOC",
+    "link_ca": "https://amzn.to/4lflcPh",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Sweatfleece Cargo Sweatpant Dupe",
+    "img": "images/dupe16.jpg",
+    "link": "https://amzn.to/4moE8vI",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Aritzia Dupe] Sweatfleece Straight Sweatpant Dupe",
+    "img": "images/dupe17.jpg",
+    "link": "https://amzn.to/45wyT7A",
+    "link_ca": "https://amzn.to/450we6b",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "aritzia", "aritzia dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Align Leggings Dupe",
+    "img": "images/dupe18.jpg",
+    "link": "https://amzn.to/45bGcjS",
+    "link_ca": "https://amzn.to/4okdPbX",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Nulu Flare Dupe",
+    "img": "images/dupe19.jpg",
+    "link": "https://amzn.to/4lWG5j8",
+    "link_ca": "https://amzn.to/4oh6zO0",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Track Highrise Shorts Dupe",
+    "img": "images/dupe20.jpg",
+    "link": "https://amzn.to/41pMew1",
+    "link_ca": "https://amzn.to/4okvjFc",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Biker Shorts Dupe",
+    "img": "images/dupe21.jpg",
+    "link": "https://amzn.to/3IZL5F8",
+    "link_ca": "https://amzn.to/4o9Wv9s",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Zip With Hood Dupe",
+    "img": "images/dupe22.jpg",
+    "link": "https://amzn.to/40PJLee",
+    "link_ca": "https://amzn.to/45hBRvk",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Halfzip Dupe",
+    "img": "images/dupe23.jpg",
+    "link": "https://amzn.to/452sEs4",
+    "link_ca": "https://amzn.to/4fumUuL",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Joggers Dupe",
+    "img": "images/dupe24.jpg",
+    "link": "https://amzn.to/4oql9TB",
+    "link_ca": "https://amzn.to/4onSoHa",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Lululemon Dupe] Scuba Halfzip Dupe",
+    "img": "images/dupe25.jpg",
+    "link": "https://amzn.to/4fnT6jt",
+    "link_ca": "https://amzn.to/46Egozl",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "lulu", "lulu dupe", "lululemon", "lululemon dupe"]
+  },
+  {
+    "name": "[Skims Dupe] Bodysuit Dupe",
+    "img": "images/dupe26.jpg",
+    "link": "https://amzn.to/4l62zNt",
+    "link_ca": "https://amzn.to/45K9SoG",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "skims", "skims dupe"]
+  },
+  {
+    "name": "[Tank Air Dupe] Tank Top Dupe",
+    "img": "images/dupe27.jpg",
+    "link": "https://amzn.to/3IYV1Pg",
+    "link_ca": "https://amzn.to/4moSDji",
+    "tags": ["woman", "girl", "dupe", "fashion", "clothes", "tankair", "tank air", "tankair dupe", "tank air dupe"]
+  },];
