@@ -382,5 +382,12 @@ const products = [
   "link_ca": "https://amzn.to/47vtQWqq",
   "img": "images/vitamix.jpg",
   "tags": ["bifl", "women"]
+},
+{
+  "name": "[BIFL] Coffee maker",
+  "link": "https://amzn.to/45kdH4N",
+  "link_ca": "https://amzn.to/45lpjoj",
+  "img": "images/pourover.jpg",
+  "tags": ["bifl", "women", "men", "cool"]
 }
   ];
