@@ -272,5 +272,24 @@ const products = [
   "link_ca": "https://amzn.to/4fBIKMR",
   "img": "images/thayers.jpg",
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[Nina Pool] Peter Thomas Roth | Water Drench Hyaluronic Glow Serum Dupe",
+  "link": "https://amzn.to/47wBQqc",
+  "img": "images/byomamu.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[Nina Pool] Peter Thomas Roth Instant FIRMx Temporary Eye Tightener Dupe",
+  "link": "https://amzn.to/3V0C6X4",
+  "img": "images/eye.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[Nina Pool] L'Occitane Cleansing & Softening Almond Shower Oil Dupe",
+  "link": "https://amzn.to/3HyZub7",
+  "link_ca": "https://amzn.to/4mGjXJP",
+  "img": "images/nivea.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 }
   ];
