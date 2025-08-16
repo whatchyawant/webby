@@ -297,14 +297,14 @@ const products = [
   "link": "https://amzn.to/41ESgcf",
   "link_ca": "https://amzn.to/4n5AyHx",
   "img": "images/toaster.jpg",
-  "tags": ["bifl", "men", "women"]
+  "tags": ["bifl", "men", "women", "cook"]
 },
 {
   "name": "[BIFL] Chef Knife",
   "link": "https://amzn.to/41BoVzy",
   "link_ca": "https://amzn.to/416NjZH",
   "img": "images/knife.jpg",
-  "tags": ["bifl", "men", "women"]
+  "tags": ["bifl", "men", "women", "cook"]
 },
 {
   "name": "[BIFL] Boots",
@@ -346,7 +346,7 @@ const products = [
   "link": "https://amzn.to/3HCRo13",
   "link_ca": "https://amzn.to/3HEEvDE",
   "img": "images/allclad.jpg",
-  "tags": ["bifl", "men", "women"]
+  "tags": ["bifl", "men", "women", "cook"]
 },
 {
   "name": "[BIFL] Jacket",
@@ -381,27 +381,48 @@ const products = [
   "link": "https://amzn.to/45kdH4N",
   "link_ca": "https://amzn.to/47vtQWqq",
   "img": "images/vitamix.jpg",
-  "tags": ["bifl", "women"]
+  "tags": ["bifl", "women", "cook"]
 },
 {
-  "name": "[BIFL] Coffee maker",
+  "name": "[BIFL] Pourover coffee maker",
   "link": "https://amzn.to/45kdH4N",
   "link_ca": "https://amzn.to/45lpjoj",
   "img": "images/pourover.jpg",
-  "tags": ["bifl", "women", "men", "cool"]
+  "tags": ["bifl", "women", "men", "cool", "cook"]
 },
 {
   "name": "[BIFL] Pan",
   "link": "https://amzn.to/4mOj02h",
   "link_ca": "https://amzn.to/41vv1BJ",
   "img": "images/pan.jpg",
-  "tags": ["bifl", "women",]
+  "tags": ["bifl", "women", "cook"]
 },
 {
   "name": "[BIFL] Cutting board",
   "link": "https://amzn.to/3JiKE9h",
   "link_ca": "https://amzn.to/4fD5ts9",
   "img": "images/cut.jpg",
-  "tags": ["bifl", "women",]
-}
+  "tags": ["bifl", "women", "cook"]
+},
+{
+  "name": "[BIFL] Coffee Grinder",
+  "link": "https://amzn.to/4oFcUTI",
+  "link_ca": "https://amzn.to/3JgCOwR",
+  "img": "images/grinder.jpg",
+  "tags": ["bifl", "women", "men", "cook"]
+},
+{
+  "name": "[BIFL] Drip Coffee Maker",
+  "link": "https://amzn.to/3HhpuI1",
+  "link_ca": "https://amzn.to/3JjIkia",
+  "img": "images/drip.jpg",
+  "tags": ["bifl", "women", "men", "cook"]
+},
+{
+  "name": "[BIFL] Pepper Grinder",
+  "link": "https://amzn.to/4mOxC1N",
+  "link_ca": "https://amzn.to/416TDjT",
+  "img": "images/grind.jpg",
+  "tags": ["bifl", "women", "cook"]
+},
   ];

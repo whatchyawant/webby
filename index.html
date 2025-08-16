@@ -218,10 +218,11 @@
   <script>
     const visibleFilters = [
       "tiktok","cool","girls","boys","women","men","makeup","skincare",
-      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe",
+      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe", "Cooking",
       "Nina Pool","Buy It For Life"
     ];
     const tagSynonyms = {
+      "cooking":"cook",
       "aritzia dupes":"aritzia dupe","aritzia dupe":"aritzia dupe","aritzia":"aritzia dupe",
       "lulu dupes":"lululemon dupe","lulu dupe":"lululemon dupe","lululemon dupes":"lululemon dupe","lululemon dupe":"lululemon dupe","lulu":"lululemon dupe",
       "tankair dupe":"tank air dupe","tank air dupes":"tank air dupe","tankair dupes":"tank air dupe","tank air":"tank air dupe","tankair":"tank air dupe",
@@ -239,7 +240,7 @@
     const filterMap = new Map([
       ["tiktok","tiktok"],["cool","cool"],["girls","girls"],["boys","boys"],["women","women"],["men","men"],
       ["makeup","makeup"],["skincare","skincare"],["Aritzia Dupes","aritzia dupe"],["Lulu Dupes","lululemon dupe"],
-      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],["Nina Pool","nina pool"],["Buy It For Life","bifl"]
+      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],["Cooking","cook"],["Nina Pool","nina pool"],["Buy It For Life","bifl"]
     ]);
 
     let country="us";
@@ -276,7 +277,7 @@
         desc.textContent="Nina Pool picks: budget-friendly skincare swaps and finds loved by Nina. 💖";
       }else if(activeTag==="bifl"){
         desc.style.display="";
-        desc.textContent="BIFL items are products you can guarantee will last and work well. Theoretically you just need to buy one to last a lifetime.";
+        desc.textContent="BIFL items are products you can guarantee will last and work well. They tend to cost more but theoretically you just need to buy one to last a lifetime.";
       }else{
         desc.style.display="none";
         desc.textContent="";
