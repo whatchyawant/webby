@@ -1,272 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Whatchya Want</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
+    :root{
+      --bg:#f5f5f5;
+      --surface:#ffffff;
+      --chip:#d6ebff;
+      --chip-hover:#c1e0ff;
+      --chip-active:#ff8fc7;
+      --text:#111;
+      --muted:#666;
+      --shadow:0 2px 6px rgba(0,0,0,.1);
+      --shadow-strong:0 4px 12px rgba(0,0,0,.18);
+      --radius:14px;
+      --gap:16px;
     }
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      overflow-x: hidden; /* stop horizontal scroll */
-      font-family: 'Roboto', Arial, sans-serif;
-      background: #f5f5f5;
-    }
-
-    header {
-      background: white;
-      text-align: center;
-      position: relative;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      width: 100%;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.6em;
-    }
-    .flag-selector {
-      font-size: 1.4rem;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
+    *{box-sizing:border-box}
+    html,body{
+      height:100%;
+      margin:0;
+      overflow-x:hidden; /* prevent side scroll */
+      background:var(--bg);
+      color:var(--text);
+      font-family: "Inter Tight", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
 
-    .search-container {
-      background: white;
-      padding: 15px 0;
-      display: flex;
-      justify-content: center;
-      width: 100%;
+    header{
+      width:100%;
+      background:var(--surface);
+      box-shadow:var(--shadow);
+      position:sticky;
+      top:0;
+      z-index:10;
     }
-    #search {
-      width: 80%;
-      max-width: 600px;
-      padding: 8px 12px;
-      font-size: 0.95em;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      outline: none;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
+    .head-inner{
+      max-width:1600px;
+      margin:0 auto;
+      padding:10px 16px;
+      display:grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items:center;
+      gap:8px;
     }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 10px;
-      justify-content: center;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-      border-top: none;
-      width: 100%;
+    .title{
+      grid-column:2;
+      text-align:center;
+      font-size:1.6rem;
+      margin:0;
+      font-weight:700;
     }
-    .filter-btn {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      background-color: #d6ebff;
-      transition: all 0.2s;
-      font-size: 0.9em;
-    }
-    .filter-btn:hover {
-      background-color: #c1e0ff;
-    }
-    .filter-btn.active {
-      background-color: pink;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-    }
-    .filter-description {
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
-      color: #444;
-      display: none;
-      background: white;
-      width: 100%;
+    .country{
+      grid-column:3;
+      justify-self:end;
+      appearance:none;
+      background:transparent;
+      border:none;
+      font-size:22px;
+      cursor:pointer;
+      padding:6px 8px;
+      line-height:1;
     }
 
-    /* Products grid always full width */
-    .products {
-      display: grid;
-      gap: 15px;
-      padding: 15px;
-      width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    .tools{
+      width:100%;
+      background:var(--surface);
+      box-shadow:var(--shadow);
     }
-    /* Guarantee at least 2 columns */
-    @media (max-width: 520px) {
-      .products {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .tools-inner{
+      max-width:1600px;
+      margin:0 auto;
+      padding:14px 16px 10px 16px;
     }
-    /* Cap at 5 columns */
-    @media (min-width: 1400px) {
-      .products {
-        grid-template-columns: repeat(5, 1fr);
-      }
+    .search-wrap{
+      display:flex;
+      justify-content:center;
+      margin:4px 0 10px 0;
+    }
+    #search{
+      width:100%;
+      min-width:240px;
+      max-width:1000px;
+      padding:10px 14px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      outline:none;
+      font-size:1rem;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,.08);
+      background:#fff;
     }
 
-    .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      width: 100%; /* fill track */
-      transition: transform 0.15s;
-      cursor: pointer;
+    .filters{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+      padding:6px 0 12px 0;
     }
-    .card:hover {
+    .chip{
+      padding:7px 14px;
+      border:none;
+      border-radius:999px;
+      background:var(--chip);
+      font-size:.92rem;
+      cursor:pointer;
+      transition:transform .12s ease, background .15s ease, box-shadow .15s ease;
+      text-transform:capitalize;
+    }
+    .chip:hover{ background:var(--chip-hover); }
+    .chip.active{
+      background:var(--chip-active);
+      color:#fff;
+      box-shadow:var(--shadow-strong);
+      transform: translateY(-1px);
+    }
+
+    .filter-desc{
+      max-width:900px;
+      margin:0 auto 10px auto;
+      padding:0 10px 14px 10px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .content{ width:100%; }
+    .content-inner{
+      max-width:1600px;
+      margin:0 auto;
+      padding:16px;
+      overflow-x:hidden; /* extra safety */
+    }
+    .products{
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:var(--gap);
+      align-items:stretch;
+      width:100%;
+      max-width:100%; /* prevent overflow */
+    }
+    @media (max-width:1300px){ .products{ grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width:1000px){ .products{ grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width:720px){ .products{ grid-template-columns: repeat(2, 1fr); } }
+
+    .card{
+      display:flex;
+      flex-direction:column;
+      background:#fff;
+      border-radius:var(--radius);
+      text-decoration:none;
+      color:inherit;
+      box-shadow:var(--shadow);
+      transition:transform .12s ease, box-shadow .12s ease;
+      height:100%;
+      min-width:0; /* fix overflow from flex/grid */
+    }
+    .card:hover{
       transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      box-shadow:var(--shadow-strong);
     }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      display:block;
     }
-    .card a {
-      padding: 10px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      flex-grow: 1;
-      display: block;
+    @media (max-width:720px){
+      .card img{ height:190px; }
+    }
+    .card-name{
+      margin-top:auto;
+      background:#f8f8f8;
+      padding:12px 10px;
+      min-height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      font-weight:600;
+      word-wrap:break-word;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Whatchya Want</h1>
-    <select id="countrySelect" class="flag-selector" aria-label="Select country">
-      <option value="us">🇺🇸</option>
-      <option value="ca">🇨🇦</option>
-    </select>
+    <div class="head-inner">
+      <div></div>
+      <h1 class="title">Whatchya Want</h1>
+      <select id="countrySelect" class="country" aria-label="Country">
+        <option value="us">🇺🇸</option>
+        <option value="ca">🇨🇦</option>
+      </select>
+    </div>
   </header>
 
-  <div class="search-container">
-    <input type="text" id="search" placeholder="Search products...">
-  </div>
+  <section class="tools">
+    <div class="tools-inner">
+      <div class="search-wrap">
+        <input id="search" type="text" placeholder="Search products…"/>
+      </div>
+      <div class="filters" id="filterBar"></div>
+      <div class="filter-desc" id="filterDesc" style="display:none;"></div>
+    </div>
+  </section>
 
-  <div class="filters" id="filterBar"></div>
-  <div class="filter-description" id="filterDescription"></div>
-
-  <div class="products" id="productsContainer"></div>
+  <main class="content">
+    <div class="content-inner">
+      <div id="productsContainer" class="products"></div>
+    </div>
+  </main>
 
   <script src="products.js"></script>
   <script>
-    const filterTags = [
-      "tiktok", "cool", "girls", "boys", "women", "men", "makeup", "skincare",
-      "aritzia dupe", "lululemon dupe", "tank air dupe", "skims dupe", "nina pool"
+    const visibleFilters = [
+      "tiktok","cool","girls","boys","women","men","makeup","skincare",
+      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe",
+      "Nina Pool","Buy It For Life"
     ];
-
     const tagSynonyms = {
-      "aritzia dupes": "aritzia dupe",
-      "lululemon dupes": "lululemon dupe",
-      "tank air dupes": "tank air dupe",
-      "skims dupes": "skims dupe",
-      "nina pool duperoonie": "nina pool"
+      "aritzia dupes":"aritzia dupe","aritzia dupe":"aritzia dupe","aritzia":"aritzia dupe",
+      "lulu dupes":"lululemon dupe","lulu dupe":"lululemon dupe","lululemon dupes":"lululemon dupe","lululemon dupe":"lululemon dupe","lulu":"lululemon dupe",
+      "tankair dupe":"tank air dupe","tank air dupes":"tank air dupe","tankair dupes":"tank air dupe","tank air":"tank air dupe","tankair":"tank air dupe",
+      "skims dupes":"skims dupe","skims dupe":"skims dupe","skims":"skims dupe",
+      "woman":"women","women":"women","girl":"girls","girls":"girls","man":"men","men":"men","boy":"boys","boys":"boys",
+      "skin care":"skincare",
+      "buy it for life":"bifl","buy-it-for-life":"bifl","bifl":"bifl",
+      "nina":"nina pool","ninapool":"nina pool","nina pool":"nina pool"
     };
-
-    const filterDescriptions = {
-      "nina pool": "The Nina Pool collection highlights her favorite tested dupes."
-    };
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialTag = normalizeTag(urlParams.get("tag") || "");
-    let activeTag = filterTags.includes(initialTag) ? initialTag : "";
-    let country = "us";
-
-    function normalizeTag(tag) {
-      tag = (tag || "").toLowerCase();
-      return tagSynonyms[tag] || tag;
+    function normalizeTag(t){
+      if(!t) return "";
+      const k = String(t).trim().toLowerCase();
+      return tagSynonyms[k] || k;
     }
+    const filterMap = new Map([
+      ["tiktok","tiktok"],["cool","cool"],["girls","girls"],["boys","boys"],["women","women"],["men","men"],
+      ["makeup","makeup"],["skincare","skincare"],["Aritzia Dupes","aritzia dupe"],["Lulu Dupes","lululemon dupe"],
+      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],["Nina Pool","nina pool"],["Buy It For Life","bifl"]
+    ]);
 
-    function renderFilters() {
-      const bar = document.getElementById("filterBar");
-      bar.innerHTML = "";
-      filterTags.forEach(tag => {
-        const btn = document.createElement("button");
-        btn.className = "filter-btn" + (tag === activeTag ? " active" : "");
-        btn.textContent = tag;
-        btn.onclick = () => {
-          activeTag = (activeTag === tag) ? "" : tag;
+    let country="us";
+    const urlParams=new URLSearchParams(window.location.search);
+    const initialTagParam=normalizeTag(urlParams.get("tag")||"");
+    const canonicalTags=Array.from(filterMap.values());
+    let activeTag=canonicalTags.includes(initialTagParam)?initialTagParam:"";
+
+    function renderFilters(){
+      const bar=document.getElementById("filterBar");
+      bar.innerHTML="";
+      for(const label of visibleFilters){
+        const canonical=filterMap.get(label);
+        const btn=document.createElement("button");
+        btn.className="chip"+(activeTag===canonical?" active":"");
+        btn.textContent=label;
+        btn.onclick=()=>{
+          activeTag=(activeTag===canonical)?"":canonical;
+          const params=new URLSearchParams(window.location.search);
+          if(activeTag){params.set("tag",activeTag);}else{params.delete("tag");}
+          history.replaceState({},"",`${location.pathname}?${params}`);
           renderFilters();
-          renderProducts();
           renderDescription();
-          const params = new URLSearchParams(window.location.search);
-          if (activeTag) {
-            params.set("tag", tag);
-          } else {
-            params.delete("tag");
-          }
-          history.replaceState({}, "", `${location.pathname}?${params}`);
+          renderProducts();
         };
         bar.appendChild(btn);
-      });
-    }
-
-    function renderDescription() {
-      const desc = document.getElementById("filterDescription");
-      if (activeTag && filterDescriptions[activeTag]) {
-        desc.textContent = filterDescriptions[activeTag];
-        desc.style.display = "block";
-      } else {
-        desc.style.display = "none";
       }
     }
 
-    function renderProducts() {
-      const container = document.getElementById("productsContainer");
-      const searchVal = document.getElementById("search").value.toLowerCase();
-      container.innerHTML = "";
-      products
-        .filter(p => {
-          const matchesSearch = p.name.toLowerCase().includes(searchVal);
-          const normalizedTags = p.tags.map(t => normalizeTag(t));
-          const matchesTag = !activeTag || normalizedTags.includes(activeTag);
-          return matchesSearch && matchesTag;
-        })
-        .forEach(p => {
-          const card = document.createElement("div");
-          card.className = "card";
-          card.onclick = () => {
-            let url = p.link;
-            if (country === "ca" && p.link_ca) url = p.link_ca;
-            window.open(url, "_blank");
-          };
-          const img = document.createElement("img");
-          img.src = p.img;
-          img.alt = p.name;
-          const link = document.createElement("a");
-          let url = p.link;
-          if (country === "ca" && p.link_ca) url = p.link_ca;
-          link.href = url;
-          link.target = "_blank";
-          link.textContent = p.name;
-          card.appendChild(img);
-          card.appendChild(link);
-          container.appendChild(card);
-        });
+    function renderDescription(){
+      const desc=document.getElementById("filterDesc");
+      if(activeTag==="nina pool"){
+        desc.style.display="";
+        desc.textContent="Nina Pool picks: budget-friendly skincare swaps and finds loved by Nina. 💖";
+      }else if(activeTag==="bifl"){
+        desc.style.display="";
+        desc.textContent="BIFL items are products you can guarantee will last and work well. Theoretically you just need to buy one to last a lifetime.";
+      }else{
+        desc.style.display="none";
+        desc.textContent="";
+      }
     }
 
-    document.getElementById("search").addEventListener("input", renderProducts);
-    document.getElementById("countrySelect").addEventListener("change", e => {
-      country = e.target.value;
-      renderProducts();
-    });
+    function productMatches(p, searchVal){
+      const name=p.name.toLowerCase();
+      const tags=(p.tags||[]).map(normalizeTag);
+      const matchesSearch=!searchVal||name.includes(searchVal)||tags.some(t=>t.includes(searchVal));
+      const matchesFilter=!activeTag||tags.includes(activeTag);
+      return matchesSearch&&matchesFilter;
+    }
+
+    function renderProducts(){
+      const wrap=document.getElementById("productsContainer");
+      wrap.innerHTML="";
+      const q=document.getElementById("search").value.trim().toLowerCase();
+      products.filter(p=>productMatches(p,q)).forEach(p=>{
+        const a=document.createElement("a");
+        a.className="card";
+        a.target="_blank";
+        let url=p.link;
+        if(country==="ca"&&p.link_ca){url=p.link_ca;}
+        a.href=url;
+        a.innerHTML=`
+          <img src="${p.img}" alt="${p.name}">
+          <div class="card-name">${p.name}</div>
+        `;
+        wrap.appendChild(a);
+      });
+    }
+
+    document.getElementById("search").addEventListener("input",renderProducts);
+    document.getElementById("countrySelect").addEventListener("change",(e)=>{country=e.target.value;renderProducts();});
 
     renderFilters();
     renderDescription();

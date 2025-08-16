@@ -291,5 +291,96 @@ const products = [
   "link_ca": "https://amzn.to/4mGjXJP",
   "img": "images/nivea.jpg",
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[BIFL] Toaster",
+  "link": "https://amzn.to/41ESgcf",
+  "link_ca": "https://amzn.to/4n5AyHx",
+  "img": "images/toaster.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Chef Knife",
+  "link": "https://amzn.to/41BoVzy",
+  "link_ca": "https://amzn.to/416NjZH",
+  "img": "images/knife.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Boots",
+  "link": "https://amzn.to/3HAVkPR",
+  "link_ca": "https://amzn.to/3JhDRwu",
+  "img": "images/timberland.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Thermos",
+  "link": "https://amzn.to/45B8PqV",
+  "link_ca": "https://amzn.to/45RoJyy",
+  "img": "images/thermos.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Water bottle",
+  "link": "https://amzn.to/45je4wvv",
+  "link_ca": "https://amzn.to/4lzIi3g",
+  "img": "images/nalgene.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Socks",
+  "link": "https://amzn.to/4oDFB3l",
+  "link_ca": "https://amzn.to/4fBb2qSS",
+  "img": "images/darn.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Pen",
+  "link": "https://amzn.to/45lThZh",
+  "link_ca": "https://amzn.to/47yVMst",
+  "img": "images/pen.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Frying Pan",
+  "link": "https://amzn.to/3HCRo13",
+  "link_ca": "https://amzn.to/3HEEvDE",
+  "img": "images/allclad.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Jacket",
+  "link": "https://amzn.to/4mKqSSf",
+  "link_ca": "https://amzn.to/45KeMlA",
+  "img": "images/jacket.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Office Chair",
+  "link": "https://amzn.to/41Gpc4d",
+  "link_ca": "https://amzn.to/4lrpmn5",
+  "img": "images/officechair.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Vacuum",
+  "link": "https://amzn.to/41L4qQV",
+  "link_ca": "https://amzn.to/41L4nVf",
+  "img": "images/vacuum.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Pencil",
+  "link": "https://amzn.to/4mOURsA",
+  "link_ca": "https://amzn.to/3JhfM8X",
+  "img": "images/pentel.jpg",
+  "tags": ["bifl", "men"]
+},
+{
+  "name": "[BIFL] Blender",
+  "link": "https://amzn.to/45kdH4N",
+  "link_ca": "https://amzn.to/47vtQWqq",
+  "img": "images/vitamix.jpg",
+  "tags": ["bifl", "men"]
 }
   ];
