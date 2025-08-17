@@ -498,7 +498,8 @@ const products = [
 },
 {
   "name": "Multimotion baby swing",
-  "link": "https://amzn.to/3JlVxHi",
+  "link": "https://amzn.to/3JDI9hJ",
+  "link_ca": "https://amzn.to/45Fn65Y",
   "img": "images/babyswing.jpg",
   "tags": ["baby"]
 },
@@ -551,5 +552,11 @@ const products = [
   "img": "images/ear.jpg",
   "tags": ["baby"]
 },
-
+{
+  "name": "Burp Cloth",
+  "link": "https://amzn.to/47Bkw3p",
+  "link_ca": "https://amzn.to/45JuahZ",
+  "img": "images/burp.jpg",
+  "tags": ["baby"]
+},
   ];
