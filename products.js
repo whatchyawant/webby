@@ -425,4 +425,131 @@ const products = [
   "img": "images/grind.jpg",
   "tags": ["bifl", "women", "cook"]
 },
+{
+  "name": "[Nina Pool] Thin hair solution",
+  "link": "https://amzn.to/45LWSyS",
+  "link_ca": "https://amzn.to/4fM86rI",
+  "img": "images/hair.jpg",
+  "tags": ["ninapool", "women", "makeup"]
+},
+{
+  "name": "Bottle brush",
+  "link": "https://amzn.to/4lBtAc2",
+  "link_ca": "https://amzn.to/45nAkWa",
+  "img": "images/brushbaby.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Baby bottle",
+  "link": "https://amzn.to/45zpWJC",
+  "link_ca": "https://amzn.to/45zpWJC",
+  "img": "images/bottles.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Portable bottle warmer",
+  "link": "https://amzn.to/4mQFOP6",
+  "link_ca": "https://amzn.to/45Q7opP",
+  "img": "images/warmer.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "8-in-1 High Chair for Babies and Toddlers",
+  "link": "https://amzn.to/45TAMvo",
+  "link_ca": "https://amzn.to/4ozYOTr",
+  "img": "images/highchair.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Baby Changing Station",
+  "link": "https://amzn.to/45n8dX9",
+  "link_ca": "https://amzn.to/4lAeZO1",
+  "img": "images/change.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Playgym",
+  "link": "https://amzn.to/4lHEoWc",
+  "link_ca": "https://amzn.to/41N4tvz",
+  "img": "images/gym.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Dishwashing bottle basket",
+  "link": "https://amzn.to/4fGdQms",
+  "link_ca": "https://amzn.to/4oDGfO7",
+  "img": "images/basket.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Lifevac",
+  "link": "https://amzn.to/470XfaR",
+  "link_ca": "https://amzn.to/45CgzJj",
+  "img": "images/vac.jpg",
+  "tags": ["baby"]
+},
+
+{
+  "name": "Peanut baby changer",
+  "link": "https://amzn.to/45lXTyt",
+  "link_ca": "https://amzn.to/3V6zIxY",
+  "img": "images/peanut.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Multimotion baby swing",
+  "link": "https://amzn.to/3JlVxHi",
+  "img": "images/babyswing.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Baby wipe dispenser",
+  "link": "https://amzn.to/45FjalN",
+  "link_ca": "https://amzn.to/4fJuFNJ",
+  "img": "images/pull.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Pacifier",
+  "link": "https://amzn.to/45BZ5MV",
+  "link_ca": "https://amzn.to/4oGSn14",
+  "img": "images/pacifier.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Baby Car Mirror",
+  "link": "https://amzn.to/3VbFtdH",
+  "link_ca": "https://amzn.to/45BZgI5",
+  "img": "images/carbaby.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Sound Machine",
+  "link": "https://amzn.to/3V6BxuO",
+  "link_ca": "https://amzn.to/3JC9lgN",
+  "img": "images/sound.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Portable Sound machine",
+  "link": "https://amzn.to/4mQUHRw",
+  "link_ca": "https://amzn.to/4mnCVW5",
+  "img": "images/psound.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "No scratch mittens",
+  "link": "https://amzn.to/47F72DE",
+  "link_ca": "https://amzn.to/4mwdNw8",
+  "img": "images/mitten.jpg",
+  "tags": ["baby"]
+},
+{
+  "name": "Ear Protection",
+  "link": "https://amzn.to/45UhOET",
+  "link_ca": "https://amzn.to/4oXm91R",
+  "img": "images/ear.jpg",
+  "tags": ["baby"]
+},
+
   ];

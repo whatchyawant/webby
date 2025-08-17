@@ -162,15 +162,30 @@
       transform: translateY(-3px);
       box-shadow:var(--shadow-strong);
     }
-    .card img{
-      width:100%;
-      height:250px;
-      object-fit:cover;
-      display:block;
+
+    /* square image wrapper */
+    .card-img-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* forces a square */
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      overflow: hidden;
     }
-    @media (max-width:720px){
-      .card img{ height:190px; }
+    .card-img-wrap img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* show whole image with white borders */
+      background: #fff;
     }
+
     .card-name{
       margin-top:auto;
       background:#f8f8f8;
@@ -218,7 +233,7 @@
   <script>
     const visibleFilters = [
       "tiktok","cool","girls","boys","women","men","makeup","skincare",
-      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe", "Cooking",
+      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe", "baby", "Cooking",
       "Nina Pool","Buy It For Life"
     ];
     const tagSynonyms = {
@@ -240,7 +255,7 @@
     const filterMap = new Map([
       ["tiktok","tiktok"],["cool","cool"],["girls","girls"],["boys","boys"],["women","women"],["men","men"],
       ["makeup","makeup"],["skincare","skincare"],["Aritzia Dupes","aritzia dupe"],["Lulu Dupes","lululemon dupe"],
-      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],["Cooking","cook"],["Nina Pool","nina pool"],["Buy It For Life","bifl"]
+      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],["baby", "baby"],["Cooking","cook"],["Nina Pool","nina pool"],["Buy It For Life","bifl"]
     ]);
 
     let country="us";
@@ -304,7 +319,9 @@
         if(country==="ca"&&p.link_ca){url=p.link_ca;}
         a.href=url;
         a.innerHTML=`
-          <img src="${p.img}" alt="${p.name}">
+          <div class="card-img-wrap">
+            <img src="${p.img}" alt="${p.name}">
+          </div>
           <div class="card-name">${p.name}</div>
         `;
         wrap.appendChild(a);
