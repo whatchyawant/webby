@@ -314,6 +314,13 @@ const products = [
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 },
 {
+  "name": "[Nina Pool] Benefit Porefessional Primer Dupe",
+  "link": "https://amzn.to/4fJxq1x",
+  "link_ca": "https://amzn.to/45DUaem",
+  "img": "images/chaf.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
   "name": "[BIFL] Toaster",
   "link": "https://amzn.to/41ESgcf",
   "link_ca": "https://amzn.to/4n5AyHx",
