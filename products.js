@@ -335,8 +335,13 @@ const products = [
   "img": "images/tan.jpg",
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 },
-
-
+{
+  "name": "[Nina Pool] Sunscreen",
+  "link": "https://amzn.to/4oDQrpR",
+  "link_ca": "https://amzn.to/45S9TIa",
+  "img": "images/suns.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
 
 
 
