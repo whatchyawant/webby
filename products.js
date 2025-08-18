@@ -293,6 +293,27 @@ const products = [
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 },
 {
+  "name": "[Nina Pool] Hi Smile Dupe",
+  "link": "https://amzn.to/45QaSIV",
+  "link_ca": "https://amzn.to/3HCJHb9",
+  "img": "images/colgate.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[Nina Pool] Mac Fix + Spray Dupe",
+  "link": "https://amzn.to/4lxvOsY",
+  "link_ca": "https://amzn.to/45nFcun",
+  "img": "images/mac.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
+  "name": "[Nina Pool] Acne Mask",
+  "link": "https://amzn.to/4mIaVMp",
+  "link_ca": "https://amzn.to/4mQ2LBW",
+  "img": "images/acne.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
   "name": "[BIFL] Toaster",
   "link": "https://amzn.to/41ESgcf",
   "link_ca": "https://amzn.to/4n5AyHx",
