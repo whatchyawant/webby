@@ -239,6 +239,7 @@ const products = [
   {
     "name": "[Nina Pool] SOL DE JANEIRO Brazilian Bum Bum Cream Dupe",
     "link": "https://amzn.to/3UxarwS",
+    "link_ca":"https://amzn.to/4fD19ce",
     "img": "images/firm.jpg",
     "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe", "tiktok"]
   },
@@ -293,6 +294,13 @@ const products = [
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 },
 {
+  "name": "[Nina Pool] Migraine Cap",
+  "link": "https://amzn.to/3UysnqL",
+  "link_ca": "https://amzn.to/45QeWJb",
+  "img": "images/migraine.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+{
   "name": "[Nina Pool] Hi Smile Dupe",
   "link": "https://amzn.to/45QaSIV",
   "link_ca": "https://amzn.to/3HCJHb9",
@@ -320,6 +328,25 @@ const products = [
   "img": "images/chaf.jpg",
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 },
+{
+  "name": "[Nina Pool] Self Tanner",
+  "link": "https://amzn.to/415UAck",
+  "link_ca": "https://amzn.to/45Fq76n",
+  "img": "images/tan.jpg",
+  "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
+},
+
+
+
+
+
+
+
+
+
+
+
+
 {
   "name": "[BIFL] Toaster",
   "link": "https://amzn.to/41ESgcf",
