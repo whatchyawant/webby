@@ -624,4 +624,18 @@ const products = [
   "img": "images/burp.jpg",
   "tags": ["baby"]
 },
+{
+  "name": "I saw this on a girl and immediately bought it",
+  "link": "https://amzn.to/4mHr70C",
+  "link_ca": "https://amzn.to/41Fmn3q",
+  "img": "images/tie.jpg",
+  "tags": ["clothes", "wedding guest dresses"]
+},
+{
+  "name": "I wore this to a wedding",
+  "link": "https://amzn.to/41aGJRX",
+  "link_ca": "https://amzn.to/4mxrsTR",
+  "img": "images/green.jpg",
+  "tags": ["clothes", "wedding guest dresses"]
+},
   ];

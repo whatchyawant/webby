@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Whatchya Want?</title>
-    <meta property="og:description" content="Shop the latest dupes, gifts, and unique finds." />
+  <meta property="og:description" content="Shop the latest dupes, gifts, and unique finds." />
   <meta property="og:image" content="https://whatchyawant.com/preview.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/images/logo.png" />
@@ -26,12 +26,11 @@
     html,body{
       height:100%;
       margin:0;
-      overflow-x:hidden; /* prevent side scroll */
+      overflow-x:hidden;
       background:var(--bg);
       color:var(--text);
-      font-family: "Inter Tight", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family:"Inter Tight", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
-
     header{
       width:100%;
       background:var(--surface);
@@ -67,7 +66,6 @@
       padding:6px 8px;
       line-height:1;
     }
-
     .tools{
       width:100%;
       background:var(--surface);
@@ -95,7 +93,6 @@
       box-shadow: inset 0 1px 3px rgba(0,0,0,.08);
       background:#fff;
     }
-
     .filters{
       display:flex;
       flex-wrap:wrap;
@@ -120,7 +117,6 @@
       box-shadow:var(--shadow-strong);
       transform: translateY(-1px);
     }
-
     .filter-desc{
       max-width:900px;
       margin:0 auto 10px auto;
@@ -129,13 +125,12 @@
       color:var(--muted);
       font-size:.95rem;
     }
-
     .content{ width:100%; }
     .content-inner{
       max-width:1600px;
       margin:0 auto;
       padding:16px;
-      overflow-x:hidden; /* extra safety */
+      overflow-x:hidden;
     }
     .products{
       display:grid;
@@ -143,12 +138,11 @@
       gap:var(--gap);
       align-items:stretch;
       width:100%;
-      max-width:100%; /* prevent overflow */
+      max-width:100%;
     }
     @media (max-width:1300px){ .products{ grid-template-columns: repeat(4, 1fr); } }
     @media (max-width:1000px){ .products{ grid-template-columns: repeat(3, 1fr); } }
     @media (max-width:720px){ .products{ grid-template-columns: repeat(2, 1fr); } }
-
     .card{
       display:flex;
       flex-direction:column;
@@ -159,18 +153,16 @@
       box-shadow:var(--shadow);
       transition:transform .12s ease, box-shadow .12s ease;
       height:100%;
-      min-width:0; /* fix overflow from flex/grid */
+      min-width:0;
     }
     .card:hover{
       transform: translateY(-3px);
       box-shadow:var(--shadow-strong);
     }
-
-    /* square image wrapper */
     .card-img-wrap {
       position: relative;
       width: 100%;
-      padding-top: 100%; /* forces a square */
+      padding-top: 100%;
       background: #fff;
       display: flex;
       align-items: center;
@@ -185,10 +177,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain; /* show whole image with white borders */
+      object-fit: contain;
       background: #fff;
     }
-
     .card-name{
       margin-top:auto;
       background:#f8f8f8;
@@ -230,42 +221,51 @@
       <div id="productsContainer" class="products"></div>
     </div>
   </main>
-  <span> This site may contain affiliate links. As an amazon associate I earn on qualifying purchases</span>
+  <span>This site may contain affiliate links. As an Amazon Associate I earn on qualifying purchases</span>
 
   <script src="products.js"></script>
   <script>
     const visibleFilters = [
       "tiktok","cool","girls","boys","women","men","makeup","skincare",
-      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe", "baby", "Cooking",
-      "Nina Pool","Buy It For Life"
+      "Aritzia Dupes","Lulu Dupes","TankAir Dupe","Skims Dupe",
+      "baby","Cooking","Nina Pool","Buy It For Life","Wedding Guest Dresses"
     ];
+
     const tagSynonyms = {
       "cooking":"cook",
-      "aritzia dupes":"aritzia dupe","aritzia dupe":"aritzia dupe","aritzia":"aritzia dupe",
-      "lulu dupes":"lululemon dupe","lulu dupe":"lululemon dupe","lululemon dupes":"lululemon dupe","lululemon dupe":"lululemon dupe","lulu":"lululemon dupe",
-      "tankair dupe":"tank air dupe","tank air dupes":"tank air dupe","tankair dupes":"tank air dupe","tank air":"tank air dupe","tankair":"tank air dupe",
-      "skims dupes":"skims dupe","skims dupe":"skims dupe","skims":"skims dupe",
-      "woman":"women","women":"women","girl":"girls","girls":"girls","man":"men","men":"men","boy":"boys","boys":"boys",
+      "aritzia dupes":"aritzia dupe","aritzia":"aritzia dupe",
+      "lulu dupes":"lululemon dupe","lulu":"lululemon dupe",
+      "tankair":"tank air dupe",
+      "skims":"skims dupe",
+      "woman":"women","girl":"girls","man":"men","boy":"boys",
       "skin care":"skincare",
-      "buy it for life":"bifl","buy-it-for-life":"bifl","bifl":"bifl",
-      "nina":"nina pool","ninapool":"nina pool","nina pool":"nina pool"
+      "buy it for life":"bifl","bifl":"bifl",
+      "nina":"nina pool",
+      "guest":"guest","wedding guest dresses":"guest"
     };
-    function normalizeTag(t){
-      if(!t) return "";
-      const k = String(t).trim().toLowerCase();
-      return tagSynonyms[k] || k;
-    }
+
     const filterMap = new Map([
-      ["tiktok","tiktok"],["cool","cool"],["girls","girls"],["boys","boys"],["women","women"],["men","men"],
-      ["makeup","makeup"],["skincare","skincare"],["Aritzia Dupes","aritzia dupe"],["Lulu Dupes","lululemon dupe"],
-      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],["baby", "baby"],["Cooking","cook"],["Nina Pool","nina pool"],["Buy It For Life","bifl"]
+      ["tiktok","tiktok"],["cool","cool"],["girls","girls"],["boys","boys"],
+      ["women","women"],["men","men"],["makeup","makeup"],["skincare","skincare"],
+      ["Aritzia Dupes","aritzia dupe"],["Lulu Dupes","lululemon dupe"],
+      ["TankAir Dupe","tank air dupe"],["Skims Dupe","skims dupe"],
+      ["baby","baby"],["Cooking","cook"],["Nina Pool","nina pool"],
+      ["Buy It For Life","bifl"],["Wedding Guest Dresses","guest"]
     ]);
 
-    let country="us";
     const urlParams=new URLSearchParams(window.location.search);
+    let country=urlParams.get("country")||"us";
+    document.getElementById("countrySelect").value=country;
+
     const initialTagParam=normalizeTag(urlParams.get("tag")||"");
     const canonicalTags=Array.from(filterMap.values());
     let activeTag=canonicalTags.includes(initialTagParam)?initialTagParam:"";
+
+    function normalizeTag(t){
+      if(!t) return "";
+      const k=String(t).trim().toLowerCase();
+      return tagSynonyms[k] || k;
+    }
 
     function renderFilters(){
       const bar=document.getElementById("filterBar");
@@ -279,6 +279,7 @@
           activeTag=(activeTag===canonical)?"":canonical;
           const params=new URLSearchParams(window.location.search);
           if(activeTag){params.set("tag",activeTag);}else{params.delete("tag");}
+          params.set("country",country);
           history.replaceState({},"",`${location.pathname}?${params}`);
           renderFilters();
           renderDescription();
@@ -314,25 +315,38 @@
       const wrap=document.getElementById("productsContainer");
       wrap.innerHTML="";
       const q=document.getElementById("search").value.trim().toLowerCase();
-      products.filter(p=>productMatches(p,q)).forEach(p=>{
-        const a=document.createElement("a");
-        a.className="card";
-        a.target="_blank";
-        let url=p.link;
-        if(country==="ca"&&p.link_ca){url=p.link_ca;}
-        a.href=url;
-        a.innerHTML=`
-          <div class="card-img-wrap">
-            <img src="${p.img}" alt="${p.name}">
-          </div>
-          <div class="card-name">${p.name}</div>
-        `;
-        wrap.appendChild(a);
-      });
+
+      products
+        .filter(p=>{
+          if(country==="ca" && !p.link_ca) return false;
+          return productMatches(p,q);
+        })
+        .forEach(p=>{
+          const a=document.createElement("a");
+          a.className="card";
+          a.target="_blank";
+          let url=p.link;
+          if(country==="ca" && p.link_ca){url=p.link_ca;}
+          a.href=url;
+          a.innerHTML=`
+            <div class="card-img-wrap">
+              <img src="${p.img}" alt="${p.name}">
+            </div>
+            <div class="card-name">${p.name}</div>
+          `;
+          wrap.appendChild(a);
+        });
     }
 
     document.getElementById("search").addEventListener("input",renderProducts);
-    document.getElementById("countrySelect").addEventListener("change",(e)=>{country=e.target.value;renderProducts();});
+    document.getElementById("countrySelect").addEventListener("change",(e)=>{
+      country=e.target.value;
+      const params=new URLSearchParams(window.location.search);
+      params.set("country",country);
+      if(activeTag){params.set("tag",activeTag);}
+      history.replaceState({},"",`${location.pathname}?${params}`);
+      renderProducts();
+    });
 
     renderFilters();
     renderDescription();
