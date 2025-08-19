@@ -342,7 +342,12 @@ const products = [
   "img": "images/suns.jpg",
   "tags": ["skincare", "women", "nina", "nina pool", "nina pool dupe"]
 },
-
+{
+  "name": "[Nina Pool] ROC under eye Revive + Glow balm Dupe",
+  "link": "https://amzn.to/4fM41nh",
+  "img": "images/ego.jpg",
+  "tags": ["skincare", "tiktok", "women", "nina", "nina pool", "nina pool dupe"]
+},
 
 
 
